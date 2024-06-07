@@ -45,29 +45,29 @@ void update_grid(std::vector<std::string> grid_row1, std::vector<std::string> gr
     } else if (x_coordinate == 3 && y_coordinate == 1 && player_status == false) {
         grid_row1[2] = '[o]';
     } else if (x_coordinate == 1 && y_coordinate == 2 && player_status == true) {
-        grid_column1[0] = '[o]';
+        grid_row2[0] = '[x]';
     } else if (x_coordinate == 1 && y_coordinate == 2 && player_status == false) {
-        grid_column1[0] = '[o]';
+        grid_row2[0] = '[o]';
     } else if (x_coordinate == 2 && y_coordinate == 2 && player_status == true) {
-        grid_column1[0] = '[o]';
+        grid_row2[1] = '[x]';
     } else if (x_coordinate == 2 && y_coordinate == 2 && player_status == false) {
-        grid_column1[0] = '[o]';
+        grid_row2[1] = '[o]';
     } else if (x_coordinate == 3 && y_coordinate == 2 && player_status == true) {
-        grid_column1[0] = '[o]';
+        grid_row2[2] = '[x]';
     } else if (x_coordinate == 3 && y_coordinate == 2 && player_status == false) {
-        grid_column1[0] = '[o]';
+        grid_row2[2] = '[o]';
     } else if (x_coordinate == 1 && y_coordinate == 3 && player_status == true) {
-        grid_column1[0] = '[o]';
+        grid_row3[0] = '[x]';
     } else if (x_coordinate == 1 && y_coordinate == 3 && player_status == false) {
-        grid_column1[0] = '[o]';
+        grid_row3[0] = '[o]';
     } else if (x_coordinate == 2 && y_coordinate == 3 && player_status == true) {
-        grid_column1[0] = '[o]';
+        grid_row3[1] = '[x]';
     } else if (x_coordinate == 2 && y_coordinate == 3 && player_status == false) {
-        grid_column1[0] = '[o]';
+        grid_row3[1] = '[o]';
     } else if (x_coordinate == 3 && y_coordinate == 3 && player_status == true) {
-        grid_column1[0] = '[o]';
+        grid_row3[2] = '[x]';
     } else if (x_coordinate == 3 && y_coordinate == 3 && player_status == false) {
-        grid_column1[0] = '[o]';
+        grid_row3[2] = '[o]';
     } else {
         std::cout << "Invalid input \n";
     }
