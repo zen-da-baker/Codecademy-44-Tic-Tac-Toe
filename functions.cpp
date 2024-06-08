@@ -84,6 +84,36 @@ void check_win_condition(std::vector<std::string> grid_row1, std::vector<std::st
         player_win = true;
     } else if (grid_row1[0] == "[o]" && grid_row2[0] == "[o]" && grid_row3[0] == "[o]") {
         bot_win = true;
+    } else if (grid_row1[1] == "[x]" && grid_row2[1] == "[x]" && grid_row3[1] == "[x]") {
+        player_win = true;
+    } else if (grid_row1[1] == "[o]" && grid_row2[1] == "[o]" && grid_row3[1] == "[o]") {
+        bot_win = true;
+    } else if (grid_row1[2] == "[x]" && grid_row2[2] == "[x]" && grid_row3[2] == "[x]") {
+        player_win = true;
+    } else if (grid_row1[2] == "[o]" && grid_row2[2] == "[o]" && grid_row3[2] == "[o]") {
+        bot_win = true;
+    } else if (grid_row1[0] == "[x]" && grid_row1[1] == "[x]" && grid_row1[3] == "[x]") {
+        player_win = true;
+    } else if (grid_row1[0] == "[o]" && grid_row1[1] == "[o]" && grid_row1[3] == "[o]") {
+        bot_win = true;
+    } else if (grid_row2[0] == "[x]" && grid_row2[1] == "[x]" && grid_row2[2] == "[x]") {
+        player_win = true;
+    } else if (grid_row2[0] == "[o]" && grid_row2[1] == "[o]" && grid_row2[2] == "[o]") {
+        bot_win = true;
+    } else if (grid_row3[0] == "[x]" && grid_row3[1] == "[x]" && grid_row3[2] == "[x]") {
+        player_win = true;
+    } else if (grid_row3[0] == "[o]" && grid_row3[1] == "[o]" && grid_row3[2] == "[o]") {
+        bot_win = true;
+    } else if (grid_row1[0] == "[x]" && grid_row2[1] == "[x]" && grid_row3[2] == "[x]") {
+        player_win = true;
+    } else if (grid_row1[0] == "[o]" && grid_row2[1] == "[o]" && grid_row3[2] == "[o]") {
+        bot_win = true;
+    } else if (grid_row1[2] == "[x]" && grid_row2[1] == "[x]" && grid_row3[0] == "[x]") {
+        player_win = true;
+    } else if (grid_row1[2] == "[o]" && grid_row2[1] == "[o]" && grid_row3[0] == "[o]") {
+        bot_win = true;
+    } else {
+        bot_win = true;
     }
 }
 
