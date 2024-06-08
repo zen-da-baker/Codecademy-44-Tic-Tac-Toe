@@ -21,15 +21,24 @@ int main() {
   std::vector<std::string> grid_row2;
   std::vector<std::string> grid_row3;
 
-  grid_row1 = {"[ ]", "[ ]", "[ ]"};
-  grid_row2 = {"[ ]", "[ ]", "[ ]"};
-  grid_row3 = {"[ ]", "[ ]", "[ ]"};
+  grid_row1.push_back("[ ]");
+  grid_row1.push_back("[ ]");
+  grid_row1.push_back("[ ]");
+
+  grid_row2.push_back("[ ]");
+  grid_row2.push_back("[ ]");
+  grid_row2.push_back("[ ]");
+
+  grid_row3.push_back("[ ]");
+  grid_row3.push_back("[ ]");
+  grid_row3.push_back("[ ]");
+  
 
   while (player_win == false || bot_win == false) {
     display_grid(grid_row1, grid_row2, grid_row3, turn);
 
     player_status = true;
-    player_turn(grid_row1, grid_row2, grid_row3, player_x_coordinate, player_y_coordinate);
+    player_turn(player_x_coordinate, player_y_coordinate);
     update_grid(grid_row1, grid_row2, grid_row3, player_x_coordinate, player_y_coordinate);
 
     player_status = false;

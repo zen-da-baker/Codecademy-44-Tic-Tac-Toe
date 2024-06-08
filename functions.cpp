@@ -24,7 +24,7 @@ void display_grid(std::vector<std::string> grid_row1, std::vector<std::string> g
     std::cout << "\n ========================================= \n";
 }
 
-void player_turn(std::vector<std::string> grid_row1, std::vector<std::string> grid_row2, std::vector<std::string> grid_row3, int player_x_coordinate, int player_y_coordinate) {
+void player_turn(int player_x_coordinate, int player_y_coordinate) {
     std::cout << "Choose an X coordinate: \n";
     std::cin >> player_x_coordinate;
 
