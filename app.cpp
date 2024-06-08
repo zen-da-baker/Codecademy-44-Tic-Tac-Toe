@@ -1,8 +1,13 @@
+#include <iostream>
+#include <vector>
+#include <cmath>
 #include "functions.hpp"
 
 int main() {
   int turn = 1;
-  bool win = false;
+
+  bool player_win = false;
+  bool bot_win = false;
 
   int player_x_coordinate;
   int player_y_coordinate;
@@ -10,7 +15,7 @@ int main() {
   int bot_x_coordinate;
   int bot_y_coordinate;
 
-  bool player_status;
+  bool player_status = true;
 
   std::vector<std::string> grid_row1;
   std::vector<std::string> grid_row2;
@@ -20,20 +25,22 @@ int main() {
   grid_row2 = {'[ ]', '[ ]', '[ ]'};
   grid_row3 = {'[ ]', '[ ]', '[ ]'};
 
-  while (win == false) {
+  while (player_win == false || bot_win == false) {
     display_grid(grid_row1, grid_row2, grid_row3, turn);
 
     player_status = true;
-    player_turn(grid_row1, grid_row2, grid_row3);
+    player_turn(grid_row1, grid_row2, grid_row3, player_x_coordinate, player_y_coordinate);
     update_grid(grid_row1, grid_row2, grid_row3, player_x_coordinate, player_y_coordinate);
 
     player_status = false;
-    bot_turn();
+    bot_turn(bot_x_coordinate, bot_y_coordinate);
     update_grid(grid_row1, grid_row2, grid_row3, bot_x_coordinate, bot_y_coordinate);
 
-    check_win_condition();
+    check_win_condition(grid_row1, grid_row2, grid_row3, player_win, bot_win);
     turn++;
   }
 
-  end_game();
+  end_game(player_win, bot_win);
+
+  return 1;
 }

@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <cmath>
 
 void display_grid(std::vector<std::string> grid_row1, std::vector<std::string> grid_row2, std::vector<std::string> grid_row3, int turn) {
     std::cout << "Turn: " << turn << "\n";
@@ -23,7 +24,7 @@ void display_grid(std::vector<std::string> grid_row1, std::vector<std::string> g
     std::cout << "\n ========================================= \n";
 }
 
-void player_turn(std::vector<std::string> grid_column1, std::vector<std::string> grid_column2, std::vector<std::string> grid_column3) {
+void player_turn(std::vector<std::string> grid_column1, std::vector<std::string> grid_column2, std::vector<std::string> grid_column3, int player_x_coordinate, int player_y_coordinate) {
     std::cout << "Choose an X coordinate: \n";
     std::cin >> player_x_coordinate;
 
@@ -71,3 +72,27 @@ void update_grid(std::vector<std::string> grid_row1, std::vector<std::string> gr
     } else {
         std::cout << "Invalid input \n";
     }
+}
+
+void bot_turn(int bot_x_coordinate, int bot_y_coordinate) {
+    bot_x_coordinate = rand() % 3;
+    bot_y_coordinate = rand() % 3;
+}
+
+void check_win_condition(std::vector<std::string> grid_row1, std::vector<std::string> grid_row2, std::vector<std::string> grid_row3, bool player_win, bool bot_win) {
+    if (grid_row1[0] == '[x]' && grid_row2[0] == '[x]' && grid_row3[0] == '[x]') {
+        player_win = true;
+    } else if (grid_row1[0] == '[o]' && grid_row2[0] == '[o]' && grid_row3[0] == '[o]') {
+        bot_win = true;
+    }
+}
+
+void end_game(bool player_win, bool bot_win) {
+    if (player_win == true) {
+        std::cout << "Player wins \n";
+    } else if (bot_win == true) {
+        std::cout << "Bot wins \n";
+    } else {
+        std::cout << "We have a tie \n";
+    }
+}
