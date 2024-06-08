@@ -17,13 +17,9 @@ int main() {
 
   bool player_status = true;
 
-  std::vector<std::string> grid_row1;
-  std::vector<std::string> grid_row2;
-  std::vector<std::string> grid_row3;
-
-  grid_row1 = {"[ ]", "[ ]", "[ ]"};
-  grid_row2 = {"[ ]", "[ ]", "[ ]"};
-  grid_row3 = {"[ ]", "[ ]", "[ ]"};
+  std::string grid_row1[3] = {"[ ]", "[ ]", "[ ]"};
+  std::string grid_row2[3] = {"[ ]", "[ ]", "[ ]"};
+  std::string grid_row3[3] = {"[ ]", "[ ]", "[ ]"};
 
   while (player_win == false || bot_win == false) {
     display_grid(grid_row1, grid_row2, grid_row3, turn);
