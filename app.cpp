@@ -37,6 +37,4 @@ int main() {
   }
 
   end_game(player_win, bot_win);
-
-  return 1;
 }

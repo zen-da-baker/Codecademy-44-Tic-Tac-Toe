@@ -1,5 +1,3 @@
-
-
 void display_grid(std::string grid_row1[3], std::string grid_row2[3], std::string grid_row3[3], int turn);
 
 void player_turn(std::string grid_row1[3], std::string grid_row2[3], std::string grid_row3[3], int x_coordinate, int y_coordinate);
