@@ -2,29 +2,29 @@
 #include <vector>
 #include <cmath>
 
-void display_grid(std::string grid_row1[3], std::string grid_row2[3], std::string grid_row3[3], int turn) {
+void display_grid(std::vector<std::string> grid_row1, std::vector<std::string> grid_row2, std::vector<std::string> grid_row3, int turn) {
     std::cout << "Turn: " << turn << "\n";
 
-    for (int c = 0; c < grid_row3[3].size(); c++) {
+    for (int c = 0; c < grid_row3.size(); c++) {
         std::cout << grid_row3[c] << " ";
     }
 
     std::cout << "\n";
 
-    for (int b = 0; b < grid_row2[3].size(); b++) {
+    for (int b = 0; b < grid_row2.size(); b++) {
         std::cout << grid_row2[b] << " ";
     }
 
     std::cout << "\n";
 
-    for (int a = 0; a < grid_row1[3].size(); a++) {
+    for (int a = 0; a < grid_row1.size(); a++) {
         std::cout << grid_row1[a] << " ";
     }
 
     std::cout << "\n ========================================= \n";
 }
 
-void player_turn(std::string grid_row1[3], std::string grid_row2[3], std::string grid_row3[3], int player_x_coordinate, int player_y_coordinate) {
+void player_turn(std::vector<std::string> grid_row1, std::vector<std::string> grid_row2, std::vector<std::string> grid_row3, int player_x_coordinate, int player_y_coordinate) {
     std::cout << "Choose an X coordinate: \n";
     std::cin >> player_x_coordinate;
 
@@ -32,7 +32,7 @@ void player_turn(std::string grid_row1[3], std::string grid_row2[3], std::string
     std::cin >> player_y_coordinate;
 }
 
-void update_grid(std::string grid_row1[3], std::string grid_row2[3], std::string grid_row3[3], int x_coordinate, int y_coordinate, bool player_status) {
+void update_grid(std::vector<std::string> grid_row1, std::vector<std::string> grid_row2, std::vector<std::string> grid_row3, int x_coordinate, int y_coordinate, bool player_status) {
     if (x_coordinate == 1 && y_coordinate == 1 && player_status == true) {
         grid_row1[0] = "[x]";
     } else if (x_coordinate == 1 && y_coordinate == 1 && player_status == false) {
@@ -79,7 +79,7 @@ void bot_turn(int bot_x_coordinate, int bot_y_coordinate) {
     bot_y_coordinate = rand() % 3;
 }
 
-void check_win_condition(std::string grid_row1[3], std::string grid_row2[3], std::string grid_row3[3], bool player_win, bool bot_win) {
+void check_win_condition(std::vector<std::string> grid_row1, std::vector<std::string> grid_row2, std::vector<std::string> grid_row3, bool player_win, bool bot_win) {
     if (grid_row1[0] == "[x]" && grid_row2[0] == "[x]" && grid_row3[0] == "[x]") {
         player_win = true;
     } else if (grid_row1[0] == "[o]" && grid_row2[0] == "[o]" && grid_row3[0] == "[o]") {
