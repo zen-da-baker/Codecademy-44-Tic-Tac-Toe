@@ -24,7 +24,7 @@ void display_grid(std::vector<std::string> grid_row1, std::vector<std::string> g
     std::cout << "\n ========================================= \n";
 }
 
-void player_turn(std::vector<std::string> grid_column1, std::vector<std::string> grid_column2, std::vector<std::string> grid_column3, int player_x_coordinate, int player_y_coordinate) {
+void player_turn(std::vector<std::string> grid_row1, std::vector<std::string> grid_row2, std::vector<std::string> grid_row3, int player_x_coordinate, int player_y_coordinate) {
     std::cout << "Choose an X coordinate: \n";
     std::cin >> player_x_coordinate;
 
@@ -34,41 +34,41 @@ void player_turn(std::vector<std::string> grid_column1, std::vector<std::string>
 
 void update_grid(std::vector<std::string> grid_row1, std::vector<std::string> grid_row2, std::vector<std::string> grid_row3, int x_coordinate, int y_coordinate, bool player_status) {
     if (x_coordinate == 1 && y_coordinate == 1 && player_status == true) {
-        grid_row1[0] = '[x]';
+        grid_row1[0] = "[x]";
     } else if (x_coordinate == 1 && y_coordinate == 1 && player_status == false) {
-        grid_row1[0] = '[o]';
+        grid_row1[0] = "[o]";
     } else if (x_coordinate == 2 && y_coordinate == 1 && player_status == true) {
-        grid_row1[1] = '[x]';
+        grid_row1[1] = "[x]";
     } else if (x_coordinate == 2 && y_coordinate == 1 && player_status == false) {
-        grid_row1[1] = '[o]';
+        grid_row1[1] = "[o]";
     } else if (x_coordinate == 3 && y_coordinate == 1 && player_status == true) {
-        grid_row1[2] = '[x]';
+        grid_row1[2] = "[x]";
     } else if (x_coordinate == 3 && y_coordinate == 1 && player_status == false) {
-        grid_row1[2] = '[o]';
+        grid_row1[2] = "[o]";
     } else if (x_coordinate == 1 && y_coordinate == 2 && player_status == true) {
-        grid_row2[0] = '[x]';
+        grid_row2[0] = "[x]";
     } else if (x_coordinate == 1 && y_coordinate == 2 && player_status == false) {
-        grid_row2[0] = '[o]';
+        grid_row2[0] = "[o]";
     } else if (x_coordinate == 2 && y_coordinate == 2 && player_status == true) {
-        grid_row2[1] = '[x]';
+        grid_row2[1] = "[x]";
     } else if (x_coordinate == 2 && y_coordinate == 2 && player_status == false) {
-        grid_row2[1] = '[o]';
+        grid_row2[1] = "[o]";
     } else if (x_coordinate == 3 && y_coordinate == 2 && player_status == true) {
-        grid_row2[2] = '[x]';
+        grid_row2[2] = "[x]";
     } else if (x_coordinate == 3 && y_coordinate == 2 && player_status == false) {
-        grid_row2[2] = '[o]';
+        grid_row2[2] = "[o]";
     } else if (x_coordinate == 1 && y_coordinate == 3 && player_status == true) {
-        grid_row3[0] = '[x]';
+        grid_row3[0] = "[x]";
     } else if (x_coordinate == 1 && y_coordinate == 3 && player_status == false) {
-        grid_row3[0] = '[o]';
+        grid_row3[0] = "[o]";
     } else if (x_coordinate == 2 && y_coordinate == 3 && player_status == true) {
-        grid_row3[1] = '[x]';
+        grid_row3[1] = "[x]";
     } else if (x_coordinate == 2 && y_coordinate == 3 && player_status == false) {
-        grid_row3[1] = '[o]';
+        grid_row3[1] = "[o]";
     } else if (x_coordinate == 3 && y_coordinate == 3 && player_status == true) {
-        grid_row3[2] = '[x]';
+        grid_row3[2] = "[x]";
     } else if (x_coordinate == 3 && y_coordinate == 3 && player_status == false) {
-        grid_row3[2] = '[o]';
+        grid_row3[2] = "[o]";
     } else {
         std::cout << "Invalid input \n";
     }
@@ -80,9 +80,9 @@ void bot_turn(int bot_x_coordinate, int bot_y_coordinate) {
 }
 
 void check_win_condition(std::vector<std::string> grid_row1, std::vector<std::string> grid_row2, std::vector<std::string> grid_row3, bool player_win, bool bot_win) {
-    if (grid_row1[0] == '[x]' && grid_row2[0] == '[x]' && grid_row3[0] == '[x]') {
+    if (grid_row1[0] == "[x]" && grid_row2[0] == "[x]" && grid_row3[0] == "[x]") {
         player_win = true;
-    } else if (grid_row1[0] == '[o]' && grid_row2[0] == '[o]' && grid_row3[0] == '[o]') {
+    } else if (grid_row1[0] == "[o]" && grid_row2[0] == "[o]" && grid_row3[0] == "[o]") {
         bot_win = true;
     }
 }

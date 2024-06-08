@@ -1,6 +1,4 @@
-#include <iostream>
-#include <vector>
-#include <cmath>
+
 
 void display_grid(std::vector<std::string> grid_row1, std::vector<std::string> grid_row2, std::vector<std::string> grid_row3, int turn);
 
