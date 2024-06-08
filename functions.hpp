@@ -4,7 +4,7 @@ void display_grid(std::vector<std::string> grid_row1, std::vector<std::string> g
 
 void player_turn(int x_coordinate, int y_coordinate);
 
-void update_grid(std::vector<std::string> grid_row1, std::vector<std::string> grid_row2, std::vector<std::string> grid_row3, int x_coordinate, int y_coordinate);
+void update_grid(std::vector<std::string> grid_row1, std::vector<std::string> grid_row2, std::vector<std::string> grid_row3, int x_coordinate, int y_coordinate, bool player_status);
 
 void bot_turn(int bot_x_coordinate, int bot_y_coordinate);
 
